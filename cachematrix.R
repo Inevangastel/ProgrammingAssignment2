@@ -31,8 +31,11 @@ cacheSolve <- function(x, ...) {
                 message("getting cached inverted matrix")
                 return(inv)
         }
-        
+        # get matrix from cache and
+        # compute inverse (matrix), put the result in inv
         inv <- solve(x$get())
+        
+        # set inverse in cache
         x$set_inversie(inv)
         inv
 }
